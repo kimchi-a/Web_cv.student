@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - CV Student</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo"><a href="index.html">CV STUDENT</a></div>
+    
+            <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="mau.html">Mẫu CV</a>
+    <a href="taocv.html">Tạo CV</a>
+    <a href="vieclam.html">Việc làm</a>
+    <a href="camnang.html">Cẩm nang</a>
+    <a href="lienhe.html">Liên hệ</a>
+</nav>
+</header>
+
+<main class="container">
+    <h1>Liên hệ với chúng tôi</h1>
+
+    <form onsubmit="guiLienHe(event)" class="form-box">
+        <label>Họ và tên *</label>
+        <input type="text" id="lienHeTen" placeholder="Nhập họ và tên">
+
+        <label>Email *</label>
+        <input type="email" id="lienHeEmail" placeholder="example@gmail.com">
+
+        <label>Nội dung *</label>
+        <textarea id="noiDung" placeholder="Nhập nội dung cần liên hệ"></textarea>
+
+        <button type="submit">Gửi liên hệ</button>
+        <p id="lienHeBao" class="success"></p>
+    </form>
+
+    <div class="contact">
+        <p><b>Email:</b> cvstudent@gmail.com</p>
+        <p><b>Điện thoại:</b> 0123 456 789</p>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 CV Student - Website dành cho sinh viên</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

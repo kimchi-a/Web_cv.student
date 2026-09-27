@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CV Student - Trang chủ</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+
+            <div class="logo">
+                <a href="index.html">CV STUDENT</a>
+            </div>
+
+           <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="mau.html">Mẫu CV</a>
+    <a href="taocv.html">Tạo CV</a>
+    <a href="vieclam.html">Việc làm</a>
+    <a href="camnang.html">Cẩm nang</a>
+    <a href="lienhe.html">Liên hệ</a>
+</nav>
+
+        </div>
+    </header>
+
+
+<main class="container">
+    <h1>Tạo CV</h1>
+
+    <p class="center">
+        Nhập thông tin của bạn để chuẩn bị nội dung CV.
+    </p>
+
+    <form onsubmit="taoCV(event)">
+
+        <div class="form-group">
+            <label>Họ và tên <span>*</span></label>
+            <input type="text" id="hoTen" placeholder="Nhập họ và tên">
+            <small id="hoTenError"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Email <span>*</span></label>
+            <input type="text" id="email" placeholder="example@gmail.com">
+            <small id="emailError"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Số điện thoại <span>*</span></label>
+            <input type="text" id="sdt" placeholder="0123456789">
+            <small id="sdtError"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Ngày sinh <span>*</span></label>
+            <input type="date" id="ngaySinh">
+            <small id="ngaySinhError"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Địa chỉ <span>*</span></label>
+            <input type="text" id="diaChi" placeholder="Nhập địa chỉ">
+            <small id="diaChiError"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Mục tiêu nghề nghiệp <span>*</span></label>
+            <textarea id="mucTieu"></textarea>
+            <small id="mucTieuError"></small>
+        </div>
+
+        <div class="form-group">
+            <label>Học vấn <span>*</span></label>
+            <textarea id="hocVan"></textarea>
+            <small id="hocVanError"></small>
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Tạo CV
+        </button>
+
+        <p id="cvSuccess"></p>
+
+    </form>
+</main>
+    <footer>
+
+        <div class="container">
+
+            <h3>CV STUDENT</h3>
+
+            <p>
+                Website hỗ trợ sinh viên tạo CV và tìm kiếm việc làm.
+            </p>
+
+            <p>
+                © 2026 CV Student - Website dành cho sinh viên
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

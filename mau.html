@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mẫu CV - CV Student</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <a href="index.html">CV STUDENT</a>
+    </div>
+
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="mau.html">Mẫu CV</a>
+        <a href="taocv.html">Tạo CV</a>
+        <a href="vieclam.html">Việc làm</a>
+        <a href="camnang.html">Cẩm nang</a>
+        <a href="lienhe.html">Liên hệ</a>
+    </nav>
+
+</header>
+
+
+<main class="container">
+
+    <h1>Mẫu CV dành cho sinh viên</h1>
+
+    <p class="center">
+        Chọn mẫu phù hợp với ngành học và vị trí bạn muốn ứng tuyển.
+    </p>
+
+    <div class="search">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Tìm mẫu CV..."
+            onkeyup="timCV()"
+        >
+
+    </div>
+
+    <div class="filter">
+
+        <button onclick="locCV('all')">
+            Tất cả
+        </button>
+
+        <button onclick="locCV('don-gian')">
+            Đơn giản
+        </button>
+
+        <button onclick="locCV('hien-dai')">
+            Hiện đại
+        </button>
+
+        <button onclick="locCV('chuyen-nghiep')">
+            Chuyên nghiệp
+        </button>
+
+    </div>
+
+    <div class="cv-list">
+
+        <div
+            class="cv-card"
+            data-type="don-gian"
+            data-name="CV Đơn giản"
+        >
+
+            <div class="cv-demo">
+
+                <img src="https://images.template.net/370085/Internship-Resume-for-College-Students-Template-edit-online-3.jpg"
+     alt="Mẫu CV đơn giản">
+
+            </div>
+
+            <h3>CV Đơn giản</h3>
+
+            <p>Gọn gàng, dễ đọc.</p>
+
+            <button onclick="xemCV('CV Đơn giản')">
+                Xem mẫu
+            </button>
+
+        </div>
+
+        <div
+            class="cv-card"
+            data-type="hien-dai"
+            data-name="CV Hiện đại"
+        >
+
+            <div class="cv-demo">
+
+                <img src="https://images.template.net/453361/Student-Resume-for-Internship-Template-edit-online.png"
+     alt="Mẫu CV hiện đại">
+
+            </div>
+
+            <h3>CV Hiện đại</h3>
+
+            <p>Trẻ trung, phù hợp sinh viên.</p>
+
+            <button onclick="xemCV('CV Hiện đại')">
+                Xem mẫu
+            </button>
+
+        </div>
+
+        <div
+            class="cv-card"
+            data-type="chuyen-nghiep"
+            data-name="CV Chuyên nghiệp"
+        >
+
+            <div class="cv-demo">
+ <img src="https://images.template.net/428508/School-Leaver-CV-Template-edit-online.png"
+     alt="Mẫu CV sinh viên mới">
+
+            </div>
+
+            <h3>CV Chuyên nghiệp</h3>
+
+            <p>Phù hợp khi ứng tuyển việc làm.</p>
+
+            <button onclick="xemCV('CV Chuyên nghiệp')">
+                Xem mẫu
+            </button>
+
+        </div>
+
+        <div
+            class="cv-card"
+            data-type="don-gian"
+            data-name="CV Sinh viên mới"
+        >
+
+            <div class="cv-demo">
+
+                <img src="https://images.template.net/428508/School-Leaver-CV-Template-edit-online.png"
+     alt="Mẫu CV sinh viên mới">
+
+            </div>
+
+            <h3>CV Sinh viên mới</h3>
+
+            <p>Dành cho người chưa có kinh nghiệm.</p>
+
+            <button onclick="xemCV('CV Sinh viên mới')">
+                Xem mẫu
+            </button>
+
+        </div>
+
+        <div
+            class="cv-card"
+            data-type="hien-dai"
+            data-name="CV Công nghệ thông tin"
+        >
+
+            <div class="cv-demo">
+
+              <img src="https://images.template.net/related-thumb/386571/Sample-Technology-Internship-Resume-Template-edit-online.webp"
+     alt="Mẫu CV Công nghệ thông tin">
+
+            </div>
+
+            <h3>CV Công nghệ thông tin</h3>
+
+            <p>Phù hợp sinh viên ngành IT.</p>
+
+            <button onclick="xemCV('CV Công nghệ thông tin')">
+                Xem mẫu
+            </button>
+
+        </div>
+
+        <div
+            class="cv-card"
+            data-type="chuyen-nghiep"
+            data-name="CV Thực tập"
+        >
+
+            <div class="cv-demo">
+
+                <img src="https://images.template.net/related-thumb/386558/Aesthetic-Advertising-Internship-Resume-Template-edit-online.webp"
+     alt="Mẫu CV thực tập">
+
+            </div>
+
+            <h3>CV Thực tập</h3>
+
+            <p>Phù hợp để ứng tuyển thực tập.</p>
+
+            <button onclick="xemCV('CV Thực tập')">
+                Xem mẫu
+            </button>
+
+        </div>
+
+    </div>
+
+</main>
+
+<div id="cvModal" class="modal">
+
+    <div class="modal-content">
+
+        <span onclick="dongCV()" class="close">
+            ×
+        </span>
+
+        <h2 id="modalTitle"></h2>
+
+        <p>
+            Đây là phần xem trước của mẫu CV.
+        </p>
+
+        <a class="btn" href="taocv.html">
+            Dùng mẫu này
+        </a>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <p>
+        © 2026 CV Student - Website dành cho sinh viên
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
